@@ -13,7 +13,7 @@ requirements = python3,kivy
 orientation = portrait
 fullscreen = 0
 
-android.permissions = INTERNET,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
+android.permissions = INTERNET,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,RECORD_AUDIO
 
 android.api = 33
 android.minapi = 21
