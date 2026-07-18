@@ -2,6 +2,7 @@
 title = Radio Local
 package.name = radiolocal
 package.domain = org.miapp
+icon.filename = %(source.dir)s/icon.png
 
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
