@@ -7,18 +7,18 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
+    container:
+      image: kivy/buildozer:latest
+      options: --user root
     steps:
       - uses: actions/checkout@v4
 
       - name: Compilar con Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
-        id: buildozer
-        with:
-          command: buildozer android debug
+        run: buildozer android debug
 
       - name: Subir APK como artefacto
         uses: actions/upload-artifact@v4
         with:
           name: radio-local-apk
-          path: ${{ steps.buildozer.outputs.filename }}
+          path: bin/*.apk
